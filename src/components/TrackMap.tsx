@@ -74,18 +74,17 @@ export function TrackMap({ trackMap, drivers, selectedDriver, onSelectDriver }: 
 
   return (
     <motion.div 
-      className="glass-panel carbon-texture p-6 h-full min-h-[600px] relative overflow-hidden flex flex-col"
+      className="glass-panel carbon-texture p-4 h-full relative overflow-hidden flex flex-col"
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
     >
       {/* Track Map SVG - Full size container */}
-      <div className="flex-1 w-full flex items-center justify-center">
+      <div className="flex-1 w-full h-full flex items-center justify-center">
         <svg 
           viewBox={viewBox} 
-          className="w-full h-full"
+          className="w-full h-full max-w-full max-h-full"
           preserveAspectRatio="xMidYMid meet"
-          style={{ minHeight: '500px', maxHeight: '700px' }}
         >
           {/* Track outline glow */}
           <path

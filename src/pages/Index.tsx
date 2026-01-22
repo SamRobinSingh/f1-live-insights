@@ -119,10 +119,10 @@ export default function Index() {
           />
         </div>
 
-        {/* Main Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
-          {/* Track Map - 2 columns */}
-          <div className="lg:col-span-2">
+        {/* Main Grid - Full width track with sidebar */}
+        <div className="grid grid-cols-1 xl:grid-cols-4 gap-6 mb-6">
+          {/* Track Map - Takes 3 columns on xl screens */}
+          <div className="xl:col-span-3 h-[calc(100vh-280px)] min-h-[600px]">
             <TrackMap
               trackMap={raceData?.track_map || null}
               drivers={simulation.driverPositions}
@@ -131,8 +131,8 @@ export default function Index() {
             />
           </div>
 
-          {/* Driver Standings - 1 column */}
-          <div className="lg:col-span-1 min-h-[400px]">
+          {/* Driver Standings - 1 column sidebar */}
+          <div className="xl:col-span-1 h-[calc(100vh-280px)] min-h-[600px]">
             <DriverStandings
               drivers={simulation.driverPositions}
               selectedDriver={selectedDriver}
